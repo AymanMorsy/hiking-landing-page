@@ -1,4 +1,96 @@
+:root {
+  --gray: #c3bfbc;
+  --gray-dark: #54524f;
+}
+
 body {
-  background: black;
+  padding: 0;
+  margin: 0;
   color: white;
+  background: wheat;
+  font-family: "Open Sans";
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(33, 98, 168);
+}
+
+header,
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  justify-content: space-between;
+  padding: 30px 50px 0px 50px;
+  background: white;
+  position: relative;
+}
+
+header::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url("./imgs/decoration-top.png");
+  width: 100%;
+  height: 196px;
+  bottom: -61px;
+  right: 0;
+  z-index: -1;
+}
+header .logo {
+  width: 90px;
+}
+header .logo img {
+  width: 100%;
+}
+
+header nav ul * {
+  margin: 0 10px;
+}
+
+header nav ul input {
+  border: none;
+  background-color: var(--gray);
+  width: 170px;
+  height: 50px;
+  border-radius: 30px;
+  padding-left: 10px;
+}
+/* remove border when is foucs */
+header nav ul input:focus {
+  outline: none;
+}
+/* hide search close btn */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+/* ------- */
+
+header nav ul .search {
+  position: relative;
+}
+header nav .search img {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+header nav ul a {
+  color: var(--gray-dark);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
 }
